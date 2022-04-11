@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { useGifs } from "../../hooks/useGifs";
-import ListOfGifs from "../../components/ListOfGifs";
-import Category from '../../components/Category'
+import { useGifs } from "hooks/useGifs";
+import ListOfGifs from "components/ListOfGifs";
+import Category from "components/Category";
+import TrendingSearches from "components/TrendingSearches";
 const POPULAR_GIFS = ["Matrix", "Chile", "Colombia"];
 
 export default function Home() {
@@ -23,8 +24,13 @@ export default function Home() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-      <button>Buscar</button>
-        <input placeholder="Search a gif here..." onChange={handleChange} type='text' value={keyword} />
+        <button>Buscar</button>
+        <input
+          placeholder="Search a gif here..."
+          onChange={handleChange}
+          type="text"
+          value={keyword}
+        />
       </form>
 
       <div className="App-main">
@@ -33,14 +39,7 @@ export default function Home() {
           <ListOfGifs gifs={gifs} />
         </div>
         <div className="App-category">
-          <Category
-            name="Categorias populares"
-            options={POPULAR_GIFS}
-          />
-          <Category
-            name="Mascotas"
-            options={['Perros', 'Gatos', 'Hamster']}
-          />
+          <TrendingSearches />
         </div>
       </div>
     </>

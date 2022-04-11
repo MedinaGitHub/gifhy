@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import Gif from "../../components/Gif";
-//import GifsContext from "../../context/GifsContext";
+import Gif from "components/Gif";
+//import GifsContext from "context/GifsContext";
 
-import useGlobalGifs from '../../hooks/useGlobalGifs'
+import useGlobalGifs from 'hooks/useGlobalGifs'
 
 export default function Detail({ params }) {
   //esto es a modo de ver que uno puede trarse las cosas del Context

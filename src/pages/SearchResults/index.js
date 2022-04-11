@@ -1,5 +1,5 @@
-import ListOfGifs from "../../components/ListOfGifs";
-import {useGifs} from '../../hooks/useGifs'
+import ListOfGifs from "components/ListOfGifs";
+import {useGifs} from 'hooks/useGifs'
 
 export default function SearchResult({ params }) {
   const { keyword } = params;
@@ -9,7 +9,7 @@ console.log('-')
   { loading ? 
     <h1>Loading...</h1> : 
     <>
-      <h3 className="App-title">{keyword}</h3>
+      <h3 className="App-title">{ decodeURI(keyword)}</h3>
       <ListOfGifs gifs={gifs} />
     </>
   }
