@@ -1,19 +1,15 @@
-import { useEffect, useState, useRef } from "react";
-import getTrendingTermsService from "service/getTrendingTermsService";
-import Category from "components/Category";
-import useNearScreen from 'hooks/useNearScreen'
+import React, { Suspense } from "react";
+import useNearScreen from "hooks/useNearScreen";
 
-function TrendingSearches() {
-  const [trends, setTrends] = useState([]);
-
-  useEffect(() => {
-    getTrendingTermsService().then(setTrends);
-  }, []);
-
-  return <Category name="Tendencias" options={trends} />;
-}
+//the import searching is for just load the pice of code when is necessary  for mobile expiriciance is important
+const TrendingSearches = React.lazy(() => import("./TrendingSearches"));
 
 export default function LazyTrending() {
   const { isNearScreen, fromRef } = useNearScreen();
-  return <div ref={fromRef}>{isNearScreen ? <TrendingSearches /> : null}</div>;
+  return (
+    <div ref={fromRef}>
+      <Suspense fallback={null}
+      >{isNearScreen ? <TrendingSearches /> : null}</Suspense>
+    </div>
+  );
 }

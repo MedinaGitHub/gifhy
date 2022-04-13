@@ -1,8 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 
+const INITIAL_PAGE = 0;
 
-export default function useNearScreen({ distance = "100px" }) {
+export default function useNearScreen() {
     const fromRef = useRef();
+    const [page, usePage] = useState(INITIAL_PAGE);
     const [isNearScreen, setShow] = useState(false);
   
     useEffect(function () {
@@ -13,7 +15,6 @@ export default function useNearScreen({ distance = "100px" }) {
         console.log("entries", entries);
         const el = entries[0];
         if (el.isIntersecting) {
-          debugger;
           setShow(true);
           // el importante el disconnect si no el observer será eterno
           observer.disconnect();
@@ -26,7 +27,7 @@ export default function useNearScreen({ distance = "100px" }) {
           : import("intersection-observer")
       ).then(() => {
           observer = new IntersectionObserver(onChange, {
-          rootMargin: distance,
+          rootMargin: '100px',
         });
   
         observer.observe(fromRef.current);

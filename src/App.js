@@ -17,7 +17,7 @@ function App() {
   //Nuevo capítulo
   //https://www.youtube.com/watch?v=VcxXipZg1-0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=4
   //TODO VIDEO MINUTO 32:33 https://www.youtube.com/watch?v=VcxXipZg1-0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=6
-
+  //TODO VIDEO MINUTO 1:02:23 same link
   /* esto del blabla.Provider es una manera pero dentro vemos la otra manera donde le paso el provider de una*/
   return (
     <StaticContext.Provider
