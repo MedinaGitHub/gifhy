@@ -1,17 +1,20 @@
 :root {
+  display: grid;
   --results-columns: 2;
 }
 
 .ListOfGifs {
-  column-count: var(--results-columns);
-  column-gap: .5em;
+  display: grid;
   min-height: 100vh;
+  /*grid-template-columns: repeat(4,1fr);*/
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); /* remember this code */
+  gap: 0px 16px;
+  align-items: center;
+  grid-template-rows: masonry;
 }
 
 .ListOfGifs-item {
-  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-  page-break-inside: avoid; /* Firefox */
-  break-inside: avoid; /* IE 10+ */
+
   background-color: #eee;
   display: inline-block;
   width: 100%;

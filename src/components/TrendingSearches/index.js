@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import useNearScreen from "hooks/useNearScreen";
 
-//the import searching is for just load the pice of code when is necessary  for mobile expiriciance is important
+//the import searching is for just load the pice of code when is necessary  for mobile experiences is important load less data
 const TrendingSearches = React.lazy(() => import("./TrendingSearches"));
 
 export default function LazyTrending() {

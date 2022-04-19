@@ -18,6 +18,10 @@ function App() {
   //https://www.youtube.com/watch?v=VcxXipZg1-0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=4
   //TODO VIDEO MINUTO 32:33 https://www.youtube.com/watch?v=VcxXipZg1-0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=6
   //TODO VIDEO MINUTO 1:02:23 same link
+  //Nuevo capítulo
+  //TODO VIDEO MINUTO 34:38 https://www.youtube.com/watch?v=oCHdFiCgOSE&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=5
+  //TODO VIDEO  1:04:40 // termine el infinit scroll, viene una explicacion de useCallback   
+  
   /* esto del blabla.Provider es una manera pero dentro vemos la otra manera donde le paso el provider de una*/
   return (
     <StaticContext.Provider
