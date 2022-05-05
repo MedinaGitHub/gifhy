@@ -27,7 +27,6 @@ export default function SearchResult({ params }) {
 
   //const handleNextPage = () => setPage(prevPage => prevPage + 1) // del boton next pages
 
-  console.log("-");
   return (
     <>
       {loading ? (

@@ -6,7 +6,8 @@ const Context = React.createContext({});// aquí no pongo nada por que este caso
 
 // ESTO AQUÍ ES EL PROVEEDOR CON LA DATA que se carga
 export function GifsContextProvider({ children }) {
-  const [gifs, setGifs] = useState([]);
+  const [gifs, setGifs] = useState([]); //al final aquí se almacenan y cambian los gifs de toda al app, ya que esto 
+  //se exporta en useGifs y se usa este gifs, y setGifs
 
   //Children serán todos los componentes que wrapee este componente
   return (

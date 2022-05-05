@@ -21,7 +21,13 @@ function App() {
   //Nuevo capítulo
   //TODO VIDEO MINUTO 34:38 https://www.youtube.com/watch?v=oCHdFiCgOSE&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=5
   //TODO VIDEO  1:04:40 // termine el infinit scroll, viene una explicacion de useCallback   
-  
+  //Nuevo video
+  //https://www.youtube.com/watch?v=Wo7_OVtu1ls&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=6
+// TODO VIDEO 44:32 https://www.youtube.com/watch?v=Wo7_OVtu1ls&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=7
+// TODO VIDEO 58:00
+// TODO VIDEO 1:26:00 deploy vercel 
+// TODO VIDEO 24:17 https://www.youtube.com/watch?v=b-pwpHaYOTI&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=7
+
   /* esto del blabla.Provider es una manera pero dentro vemos la otra manera donde le paso el provider de una*/
   return (
     <StaticContext.Provider
@@ -41,6 +47,7 @@ function App() {
             <Route component={Home} path="/" />
             <Route component={SearchResults} path="/search/:keyword" />
             <Route component={Detail} path="/gif/:id" />
+            <Route component={()=> <h1>404 ERROR :(</h1>} path="/404" />
           </GifsContextProvider>
         </section>
       </div>

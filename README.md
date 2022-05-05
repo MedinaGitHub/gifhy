@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Conceptos  a manejar en este proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1) React.Memo
+React memo sirve para memoizar un componente de tal manera que  solo se renderice si los parametros de las props cambian. Recordar de que si se ejecuta un setState, se re renderea todos los elementos que compartan ese nivel del arbol (funciones y componentes).
 
-## Available Scripts
+2) useCallback
+useCallback sirve para memoizar una función. lo que hace es guardar la funcion en memoria y la remplaza cuando cambian las dependencias del segundo parámetro. evitando que la función se vuelva a crear en cada render.
 
-In the project directory, you can run:
+3) useMemo
+useMemo sirve para memoizar funciones.
 
-### `npm start`
+//ojo con estos dos puntos, el memoizar puede ser contra producente en el rendimiento cuando el componente es pequeño y su doble renderizado no tiene impacto en el performance
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4)Context
+El context tiene 2 partes. la primera es provider, es el que hace el wrap del componente puede tener un value={} con la info que luego  el context va a consumir desde donde se le invoque. el context es el cosumidor. de hecho desde un hook o custom hook como es el caso de este proyecto puedo gestionar el estado global consumido por el context. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5)Testing
+Aquí se uso un poco de @testing-library/react
+se testio el home, que cargara, eso en el archivo App.test.js y dentro del archivo __tests__ se intentó testar algo que quedó pendiente.
 
-### `npm test`
+6) import debounce from "just-debounce-it";
+Hay una librería lamada just-___-it   donde el ____  es lo que queremos por ejemplo en este caso una funcionalidad de debounce, entonces es una libreríá donde obtienes solo lo que necesitas.
+Para el caso del debounce lo que hace es  ignorar por X tiempo las llamadas a la funcion que tiene adentro
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7)Uso de React Developer Tools
+Esta herramienta con da funcionalidades para
+ A) Ver cuantas veces se re renderea un elemento.
+ B) Ver cual es el elementó más pesado, el que más se re renderea,
+ C) poder ver el state y props de un componente.
+ 
