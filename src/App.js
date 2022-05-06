@@ -27,6 +27,7 @@ function App() {
 // TODO VIDEO 58:00
 // TODO VIDEO 1:26:00 deploy vercel 
 // TODO VIDEO 24:17 https://www.youtube.com/watch?v=b-pwpHaYOTI&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=7
+// TODO VIDEO 1:12:00 pendiente implementar helmet en el searchResult ahora viene integracion con githubs
 
   /* esto del blabla.Provider es una manera pero dentro vemos la otra manera donde le paso el provider de una*/
   return (
