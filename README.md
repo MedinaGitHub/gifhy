@@ -30,4 +30,5 @@ Esta herramienta con da funcionalidades para
  A) Ver cuantas veces se re renderea un elemento.
  B) Ver cual es el elementó más pesado, el que más se re renderea,
  C) poder ver el state y props de un componente.
- 
+ Con esto se tomaron deciciones como mover componentes que estaban en el mismo archivo, dejarlos en archivos distintos para evitar re renders.
+

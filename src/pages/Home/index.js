@@ -8,10 +8,11 @@ import SearchForm from "components/SearchForm";
 const POPULAR_GIFS = ["Matrix", "Chile", "Colombia"];
 
 export default function Home() {
-  const [path, pushLocation] = useLocation();
+  //const [path, pushLocation] = useLocation();
   const { loading, gifs } = useGifs();
 
-  //al usar useCallback evitamos que el componente SearchForm se re renderice varias veces 
+  //al usar useCallback evitamos que el componente SearchForm se re renderice varias veces
+  /*
   const handleSubmit = useCallback(
     ({ keyword }) => {
       //navegar a otra ruta
@@ -19,10 +20,15 @@ export default function Home() {
     },
     [pushLocation]
   );
+  */
 
   return (
     <>
-      <SearchForm onSubmit={handleSubmit} />
+    <header className="o-header">
+    <SearchForm/>
+      {/*<SearchForm onSubmit={handleSubmit} /> */}
+    </header>
+    <div className="App-wrapper">
       <div className="App-main">
         <div className="App-results">
           <h3 className="App-title">Última búsqueda</h3>
@@ -32,6 +38,7 @@ export default function Home() {
           <TrendingSearches />
         </div>
       </div>
-    </>
+    </div>
+  </>
   );
 }

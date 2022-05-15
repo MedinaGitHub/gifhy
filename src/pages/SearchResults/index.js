@@ -5,10 +5,11 @@ import { useRef, useEffect, useCallback } from "react";
 import useNearScreen from "hooks/useNearScreen";
 import debounce from "just-debounce-it";
 import Helmet from "react-helmet";
+import SearchForm from "components/SearchForm";
 
 export default function SearchResult({ params }) {
-  const { keyword } = params;
-  const { loading, gifs, setPage } = useGifs({ keyword }); //set page actualiza la paginación
+  const { keyword, rating = 'g' } = params;
+  const { loading, gifs, setPage } = useGifs({ keyword, rating }); //set page actualiza la paginación
   const title = gifs ? `${gifs.length} resultados de ${keyword}` : "";
   const externalRef = useRef();
 
@@ -41,10 +42,14 @@ export default function SearchResult({ params }) {
             <title>{title}</title>
             <meta name="descripcion" content="Gif searcher"></meta>
           </Helmet>
-
-          <h3 className="App-title">{decodeURI(keyword)}</h3>
-          <ListOfGifs gifs={gifs} />
-          <div id="visor" ref={externalRef}></div>
+          <header className="o-header">
+            <SearchForm initialKeyword={keyword} initialRating={rating} />
+          </header>
+          <div className="App-wrapper">
+            <h3 className="App-title">{decodeURI(keyword)}</h3>
+            <ListOfGifs gifs={gifs} />
+            <div id="visor" ref={externalRef}></div>
+          </div>
         </>
       )}
       <br />
