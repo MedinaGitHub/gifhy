@@ -1,10 +1,14 @@
+import {Suspense} from 'react'
 import "./App.css";
 import { Link, Route } from "wouter";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import SearchResults from "./pages/SearchResults";
+import Header from "components/Header";
+import Register from 'pages/Register'
+import Login from "pages/Login";
+import { UserContextProvider } from "./context/UserContext";
 import { GifsContextProvider } from "./context/GifsContext";
-import StaticContext from "./context/StaticContext";
 
 //La palabra provider es por que provee es al que hace el wrapp, luego  con el hooc
 // useCOntext hago la otra parte que es consumirlo
@@ -32,18 +36,15 @@ function App() {
 // TODO VIDEO 1:31:00 hacer los test https://www.youtube.com/watch?v=Wjy_nlYXTik&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=9
 // TODO hacer un resumen en el Readme por ejemplo se me olvido que hace el suspense.
   //TODO ver en github la clase de inicio sesión, registro y agrgar a favorito https://www.youtube.com/watch?v=VT5S9Y49SYs&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=9
+// TODO minuto 27 está luchando con los css https://www.youtube.com/watch?v=dtbI6gDnTFU&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=10
 
 
-/* esto del blabla.Provider es una manera pero dentro vemos la otra manera donde le paso el provider de una*/
-  return (
-    <StaticContext.Provider
-      value={{
-        name: "seba",
-        suscribeteAlCanal: true,
-      }}
-    >
+return (
+    <UserContextProvider>
       <div className="App">
+      <Suspense fallback={null}>
         <section className="App-content">
+          <Header />
           <Link to="/">
             <figure className="App-logo">
               <img alt="Giffy logo" src="/logo.png" />
@@ -51,13 +52,16 @@ function App() {
           </Link>
           <GifsContextProvider>
             <Route component={Home} path="/" />
+            <Route component={Login} path="/login" />
+            <Route component={Register} path="/register" />
             <Route component={SearchResults} path="/search/:keyword/:rating?" />
             <Route component={Detail} path="/gif/:id" />
             <Route component={()=> <h1>404 ERROR :(</h1>} path="/404" />
           </GifsContextProvider>
         </section>
+        </Suspense>
       </div>
-    </StaticContext.Provider>
+      </UserContextProvider>
   );
 }
 
