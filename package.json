@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.3.1",
+    "@emotion/styled": "^10.3.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "emotion-theming": "^10.3.0",
     "formik": "^2.2.9",
     "intersection-observer": "^0.12.0",
     "just-debounce-it": "^3.0.1",

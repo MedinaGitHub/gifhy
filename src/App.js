@@ -37,6 +37,9 @@ function App() {
 // TODO hacer un resumen en el Readme por ejemplo se me olvido que hace el suspense.
   //TODO ver en github la clase de inicio sesión, registro y agrgar a favorito https://www.youtube.com/watch?v=VT5S9Y49SYs&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=9
 // TODO minuto 27 está luchando con los css https://www.youtube.com/watch?v=dtbI6gDnTFU&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=10
+// TODO MIN 49 reu utilizar styled-components https://www.youtube.com/watch?v=DjVGdUM1dHQ&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=11 
+// 18 días =O 16 horas.
+
 
 
 return (
