@@ -1,6 +1,5 @@
 import ListOfGifs from "components/ListOfGifs";
 import { useGifs } from "hooks/useGifs";
-//import useNearScreen
 import { useRef, useEffect, useCallback } from "react";
 import useNearScreen from "hooks/useNearScreen";
 import debounce from "just-debounce-it";
@@ -30,6 +29,7 @@ export default function SearchResult({ params }) {
     [debounceHandleNextPage, isNearScreen]
   );
 
+  //paginación manual
   //const handleNextPage = () => setPage(prevPage => prevPage + 1) // del boton next pages
 
   return (

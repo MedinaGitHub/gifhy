@@ -1,11 +1,7 @@
-import { useCallback } from "react";
-import { Link, useLocation } from "wouter";
 import { useGifs } from "hooks/useGifs";
 import ListOfGifs from "components/ListOfGifs";
-import Category from "components/Category";
 import TrendingSearches from "components/TrendingSearches";
 import SearchForm from "components/SearchForm";
-const POPULAR_GIFS = ["Matrix", "Chile", "Colombia"];
 
 export default function Home() {
   //const [path, pushLocation] = useLocation();

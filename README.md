@@ -32,3 +32,27 @@ Esta herramienta con da funcionalidades para
  C) poder ver el state y props de un componente.
  Con esto se tomaron deciciones como mover componentes que estaban en el mismo archivo, dejarlos en archivos distintos para evitar re renders.
 
+ 8) React Lazy y Suspense Fallback
+ la función Lazy lo que hace es cargar de  manera diferida una componentes de tal manera que el JS se carga cómo un chunk, es importante que wrapeado con un Suspense el cual tiene una propiedad fallback que mostrará por mientas un cargado o algo así mientras el componente Lazy se carga.
+
+ 9) Formik
+ Es una librería de formularios muy popular.
+
+ 10) Inifite Scroll
+ Aquí usamos la estrategia de el intersaction observer y cuando habíá una interseción, hacíá un request para traer más gifs
+ https://developer.mozilla.org/es/docs/Web/API/Intersection_Observer_API
+
+11) React Helmet react-helmet
+React helmet es una librería que nos ayuda en el SEO poniendo etiquetas meta o title, etc
+
+12)  ReactDOM.createPortal
+ReactDOM.createPortal es una función que nos permite crear un elemento en un DOM diferente. Aquí se usa para crear un elemento que se pueda mover en el DOM diferente. Esto soluciona problemas cómo que el z-index de un modal no funciona.
+
+13)Styled-Components con emotions
+Esta librería nos permite crear estilos en react como componentes obteniendo los beneficios de usar JS en CSS
+
+14) CCS In JS
+Esta librería nos permite crear estilos en react. que irán dentro de una etiqueta css={}
+
+ TODO:
+ Hacer la API. subirlo a mi portafolio explicando todo el proyecto, y los puntos de este Readme
