@@ -20,7 +20,7 @@ return (
           <Header />
           <Link to="/">
             <figure className="App-logo">
-              <img alt="Giffy logo" src="/logo.png" />
+              <img alt="gifhy logo" src="/logo.png" />
             </figure>
           </Link>
           <GifsContextProvider>

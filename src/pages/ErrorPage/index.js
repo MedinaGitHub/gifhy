@@ -46,7 +46,7 @@ export default function ErrorPage() {
   return (
     <>
       <Helmet>
-        <title>Error 404 | Giffy</title>
+        <title>Error 404 | Gifhy</title>
       </Helmet>
       <header className="o-header">
         <SearchForm />
