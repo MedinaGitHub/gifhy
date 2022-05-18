@@ -55,4 +55,4 @@ Esta librería nos permite crear estilos en react como componentes obteniendo lo
 Esta librería nos permite crear estilos en react. que irán dentro de una etiqueta css={}
 
  TODO:
- Hacer la API. subirlo a mi portafolio explicando todo el proyecto, y los puntos de este Readme
+ Hacer la API. subirlo a mi portafolio explicando todo el proyecto, y los puntos de este Readme.
